@@ -1,6 +1,6 @@
 FROM centos:latest
 MAINTAINER usmanali200087@gmail.com
-RUN yum install -y httpd \
+RUN sudo apt install -y httpd \
  zip\
  unzip\
  ADD unzip https://www.free-css.com/assets/files/free-css-templates/download/page278/uliya.zip /var/www/html
