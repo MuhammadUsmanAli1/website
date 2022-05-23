@@ -1,7 +1,7 @@
 
 FROM ubuntu
 ENV DEBIAN_FRONTEND=noninteractive
-MAINTER usmanali20008@gmail.com
+MAINTER usmanali200087@gmail.com
 RUN apt-get update
 RUN apt-get install apache2 -y
 RUN apt-get install apache2-utils -y
