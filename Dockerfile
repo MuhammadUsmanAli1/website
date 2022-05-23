@@ -1,13 +1,10 @@
-FROM ubuntu 
-MAINTAINER usmanali200087@gmail.com
-RUN apt update
-RUN apt install –y apache2 
-RUN apt install –y apache2-utils
- zip\
- unzip\
- ADD unzip https://www.free-css.com/assets/files/free-css-templates/download/page278/uliya.zip /var/www/html
- WORKDIR /var/www/html
- RUN cp -rvf uliya/*
- RUN rm -rf uliya uliya.zip
- CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
- EXPOSE 80
+
+FROM ubuntu
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update
+RUN apt-get install apache2 -y
+RUN apt-get install apache2-utils -y
+RUN apt-get update && apt-get install -y docker
+RUN apt-get clean
+EXPOSE 80
+CMD ["apache2ctl","-D","FOREGROUND"]
