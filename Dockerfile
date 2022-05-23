@@ -5,7 +5,6 @@ RUN apt-get install apache2 -y
 RUN apt-get install apache2-utils -y
 RUN echo 'Hello, docker' > /var/www/index.html
 RUN apt-get update && apt-get install -y docker
-RUN apt-get install unzip
 WORKDIR /var/www/html
 RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page278/uliya.zip
 RUN unzip uliya.zip
